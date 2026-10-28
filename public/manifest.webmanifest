@@ -1,0 +1,10 @@
+{
+  "name": "CoCekIn",
+  "short_name": "CoCekIn",
+  "description": "Find your clan. Rule the war. A fan-made Clash of Clans hub.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0e0a1c",
+  "theme_color": "#0e0a1c",
+  "icons": [{ "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}

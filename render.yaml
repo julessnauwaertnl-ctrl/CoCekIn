@@ -1,0 +1,23 @@
+# Render Blueprint: New + > Blueprint > pick this repo. A persistent disk (paid "Starter" plan or higher) keeps your SQLite database across deploys.
+services:
+  - type: web
+    name: cocekin
+    runtime: docker
+    plan: starter
+    healthCheckPath: /health
+    autoDeploy: true
+    disk:
+      name: cocekin-data
+      mountPath: /data
+      sizeGB: 1
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_PATH
+        value: /data/cocekin.db
+      - key: TRUST_PROXY
+        value: "true"
+      - key: SITE_URL
+        sync: false   # e.g. https://cocekin.onrender.com or your own domain
+      - key: COC_API_TOKEN
+        sync: false   # optional, enables account verification (see README)
